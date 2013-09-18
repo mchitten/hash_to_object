@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = HashToObj::VERSION
   spec.authors       = ["Michael Chittenden"]
   spec.email         = ["mchitten@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Converts a Hash into a Class object}
+  spec.summary       = %q{Converts a Hash into a Class object}
   spec.homepage      = ""
   spec.license       = "MIT"
 
