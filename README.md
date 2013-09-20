@@ -1,11 +1,11 @@
 # HashToObj
 
-The hash_to_object gem converts a hash into a class Object.  For example:
+The hash_to_object gem converts a hash into a Class Object.  For example:
 
 ```ruby
 h = { :title => 'Hello world!' }.to_obj
 p h.title
-#> "Hello world!"
+# => "Hello world!"
 ```
 
 ## Installation
@@ -24,12 +24,12 @@ Or install it yourself as:
 
 ## Usage
 
-Using h_t_o is very simple.  Just call the `to_obj` method on any class.
+Using hash_to_object is very simple.  Just call the `to_obj` method on any valid hash.
 
 ```ruby
 h = { :title => 'Hello world!' }.to_obj
 p h.title
-#> "Hello world!"
+# => "Hello world!"
 ```
 
 ## Contributing
