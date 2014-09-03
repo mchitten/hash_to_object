@@ -9,19 +9,18 @@ class Hash
   #   => "hello world"
   def to_obj
     hash = self
-    klass = Class.new
+    klass = OpenStruct.new
     hash.each do |key, val|
-      klass.send(:define_method, "#{key}=", proc { |val| klass.instance_variable_set("@#{key}", val) })
-      klass.send(:define_method, key, proc { klass.instance_variable_get("@#{key}") })
+      klass.send("#{key}=", val)
 
       unless val.instance_of? Hash
-        klass.instance_variable_set("@#{key}", val)
+        klass.send("#{key}=", val)
       else
-        klass.instance_variable_set("@#{key}", val.to_obj)
+        klass.send("#{key}=", val.to_obj)
       end
     end
 
-    klass.new
+    klass
   end
 end
 
